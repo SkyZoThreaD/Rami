@@ -30,7 +30,8 @@ public:
 
 		setMaterialType(video::EMT_TRANSPARENT_ALPHA_CHANNEL);
 		setMaterialFlag(video::EMF_LIGHTING, false);
-		setMaterialTexture(0, drv->getTexture("./Media/classic-cards.png"));
+		if(type.m_col == CardColor::Jocker) setMaterialTexture(0, drv->getTexture("./Media/joker.png"));
+		else setMaterialTexture(0, drv->getTexture("./Media/classic-cards.png"));
 	}
 
 	virtual void OnRegisterSceneNode()

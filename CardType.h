@@ -10,7 +10,8 @@ enum CardColor {
 	Hearts,
 	Tile,
 	Clover,
-	Pike
+	Pike,
+	Jocker
 };
 
 class CardType{
@@ -42,6 +43,11 @@ TC_area TC_from_CardType(CardType type)
 	case CardColor::Tile:	ret.v_min = Card_TC_V * 1; break;
 	case CardColor::Hearts: ret.v_min = Card_TC_V * 2; break;
 	case CardColor::Pike:	ret.v_min = Card_TC_V * 3; break;
+	case CardColor::Jocker:
+		ret.v_min = ret.u_min = 0;
+		ret.v_max = ret.u_max = 1;
+		return ret;
+		break;
 	default: break;
 	}
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Rami_solution" Database="" Version="10.0.0">
+  <Project Name="Rami" Path="Rami.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="Rami" ConfigName="Debug_Win32"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="Rami" ConfigName="Release_Win32"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

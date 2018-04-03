@@ -1,24 +1,3 @@
-/** Example 003 Custom SceneNode
-
-This Tutorial is more advanced than the previous ones.
-If you are currently just playing around with the Irrlicht
-engine, you may want to look at other examples first.
-This tutorials shows how to create a custom scene node and
-how to use it in the engine. A custom scene node is needed
-if you want to implement a render technique the Irrlicht
-Engine currently does not support. For example, you can write
-an indoor portal based renderer or an advanced terrain scene
-node with it. By creating custom scene nodes, you can
-easily extend the Irrlicht Engine and adapt it to your own
-needs.
-
-I will keep the tutorial simple: Keep everything very
-short, everything in one .cpp file, and I'll use the engine
-here as in all other tutorials.
-
-To start, I include the header files, use the irr namespace,
-and tell the linker to link with the .lib file.
-*/
 #include <irrlicht.h>
 #include "driverChoice.h"
 #include <vector>
@@ -55,19 +34,24 @@ public:
 
 void fillup_card_game( PlayerStock *stock )
 {
-	stock->empty();
+	CSampleSceneNode *myNode;
 	for( int color = 0; color < 4; color++ )
 		for ( int nb = 0; nb < 13; nb++ )
 		{
-			CSampleSceneNode *myNode = new CSampleSceneNode(smgr->getRootSceneNode(), smgr, 666, driver, CardType((CardColor)color, nb));
+			myNode = new CSampleSceneNode(smgr->getRootSceneNode(), smgr, 666, driver, CardType((CardColor)color, nb));
 			stock->AddCard(new Card(CardType((CardColor)color, nb), myNode));
 		}
+	for( int i=0; i<2; i++)
+	{
+		myNode = new CSampleSceneNode(smgr->getRootSceneNode(), smgr, 666, driver, CardType(CardColor::Jocker, 0));
+		stock->AddCard(new Card(CardType(CardColor::Jocker, 0), myNode));
+	}
 }
 
 int main()
 {
 	// Irrlicht init
-	video::E_DRIVER_TYPE driverType = video::E_DRIVER_TYPE::EDT_OPENGL; //driverChoiceConsole();
+	video::E_DRIVER_TYPE driverType = video::E_DRIVER_TYPE::EDT_OPENGL;
 	MyEventReceiver receiver;
 	IrrlichtDevice *device = createDevice(driverType, core::dimension2d<u32>(1280, 800), 16, false, false, false, &receiver);
 	if (device == 0) return 1; // could not create selected driver.
@@ -80,15 +64,15 @@ int main()
 	PlayerStock CardGame;
 	fillup_card_game(&CardGame);
 	CardGame.RandomizeOrder();
-	CardGame.SetPosition(irr::core::vector2df(0, -20));
+	CardGame.SetPosition(irr::core::vector2df(0, -40));
 
 	// Player's Game init
 	PlayerStock PlayerGame;
-	PlayerGame.SetPosition(irr::core::vector2df(-22, -20));
+	PlayerGame.SetPosition(irr::core::vector2df(-22, -10));
 
 	// Computer's Game init
 	PlayerStock AIGame;
-	PlayerGame.SetPosition(irr::core::vector2df(-22, 10));
+	AIGame.SetPosition(irr::core::vector2df(22, -10));
 
 	int PlayersTurnToDistribute = 1; // 1 : humans turn to play, 0 : ai
 
@@ -101,7 +85,7 @@ int main()
 
 	CardGame.refreshPos(false);
 	PlayerGame.refreshPos(true);
-	PlayerGame.refreshPos(true);
+	AIGame.refreshPos(true);	
 
 	/*
 	Now draw everything and finish.

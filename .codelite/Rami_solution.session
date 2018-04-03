@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Session Name="/home/tupac/Rami/Rami_solution.workspace">
+  <int Value="4" Name="m_selectedTab"/>
+  <wxString Value="/home/tupac/Rami/Rami_solution.workspace" Name="m_workspaceName"/>
+  <TabInfoArray Name="TabInfoArray">
+    <TabInfo>
+      <wxString Value="/home/tupac/Rami/main.cpp" Name="FileName"/>
+      <int Value="54" Name="FirstVisibleLine"/>
+      <int Value="65" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/tupac/Rami/PlayerStock.h" Name="FileName"/>
+      <int Value="31" Name="FirstVisibleLine"/>
+      <int Value="44" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/tupac/Rami/Card.h" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/tupac/Rami/CardSceneNode.h" Name="FileName"/>
+      <int Value="24" Name="FirstVisibleLine"/>
+      <int Value="32" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/tupac/Rami/CardType.h" Name="FileName"/>
+      <int Value="30" Name="FirstVisibleLine"/>
+      <int Value="52" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+  </TabInfoArray>
+  <SerializedObject Name="m_breakpoints">
+    <long Value="0" Name="Count"/>
+  </SerializedObject>
+</Session>
