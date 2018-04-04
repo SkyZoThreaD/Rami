@@ -35,17 +35,19 @@ public:
 void fillup_card_game( PlayerStock *stock )
 {
 	CSampleSceneNode *myNode;
+	
+	for( int i=0; i<2; i++)
+	{
+		myNode = new CSampleSceneNode(smgr->getRootSceneNode(), smgr, 666, driver, CardType(CardColor::Jocker, 0));
+		stock->AddCard(new Card(CardType(CardColor::Jocker, 0), myNode));
+	}
+	
 	for( int color = 0; color < 4; color++ )
 		for ( int nb = 0; nb < 13; nb++ )
 		{
 			myNode = new CSampleSceneNode(smgr->getRootSceneNode(), smgr, 666, driver, CardType((CardColor)color, nb));
 			stock->AddCard(new Card(CardType((CardColor)color, nb), myNode));
 		}
-	for( int i=0; i<2; i++)
-	{
-		myNode = new CSampleSceneNode(smgr->getRootSceneNode(), smgr, 666, driver, CardType(CardColor::Jocker, 0));
-		stock->AddCard(new Card(CardType(CardColor::Jocker, 0), myNode));
-	}
 }
 
 int main()

@@ -41,7 +41,6 @@ public:
 		irr::f32 i = 0;
 		for (auto v : Cards)
 		{
-			v->Node->setScale(irr::core::vector3df(.4, .4, .4));
 			if(deployed) v->Node->setPosition(irr::core::vector3df(ScreenPosition.X, 0, ScreenPosition.Y) + irr::core::vector3df(0, i*CardOffset_Depth, i*CardOffset_Side));
 			else v->Node->setPosition(irr::core::vector3df(ScreenPosition.X, 0, ScreenPosition.Y)+ irr::core::vector3df(0, i*CardOffset_Depth, 0));
 			i += 1.0;

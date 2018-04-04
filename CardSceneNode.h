@@ -32,6 +32,7 @@ public:
 		setMaterialFlag(video::EMF_LIGHTING, false);
 		if(type.m_col == CardColor::Jocker) setMaterialTexture(0, drv->getTexture("./Media/joker.png"));
 		else setMaterialTexture(0, drv->getTexture("./Media/classic-cards.png"));
+		setScale(irr::core::vector3df(.4, .4, .4));
 	}
 
 	virtual void OnRegisterSceneNode()

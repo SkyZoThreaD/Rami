@@ -4,7 +4,7 @@
 #include <irrlicht.h>
 
 // globals
-static irr::f32 CardOffset_Depth = -0.01;
+static irr::f32 CardOffset_Depth = -0.1;
 static irr::f32 CardOffset_Side = 1.8;
 
 class Card
