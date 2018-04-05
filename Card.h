@@ -5,7 +5,7 @@
 
 // globals
 static irr::f32 CardOffset_Depth = -0.1;
-static irr::f32 CardOffset_Side = 1.8;
+static irr::f32 CardOffset_Side = 1.9;
 
 class Card
 {

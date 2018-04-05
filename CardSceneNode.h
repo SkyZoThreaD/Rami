@@ -15,24 +15,25 @@ public:
 		Material.Wireframe = false;
 		Material.Lighting = false;
 
-		f32 Card_W = 10;
-		f32 Card_H = 15;
+		f32 Card_W = 10/2;
+		f32 Card_H = 15/2;
 
 		TC_area tc_array = TC_from_CardType(type);
 
-		Vertices[0] = video::S3DVertex(core::vector3df(0+ Card_H, 0, 0+ Card_W), core::vector3df(0, 0, -1), video::SColor(255, 255, 255, 255), core::vector2d< f32 >(tc_array.u_max, tc_array.v_min));
-		Vertices[1] = video::S3DVertex(core::vector3df(0- Card_H, 0, 0+ Card_W), core::vector3df(0, 0, -1), video::SColor(255, 255, 255, 255), core::vector2d< f32 >(tc_array.u_max, tc_array.v_max));
-		Vertices[2] = video::S3DVertex(core::vector3df(0- Card_H, 0, 0- Card_W), core::vector3df(0, 0, -1), video::SColor(255, 255, 255, 255), core::vector2d< f32 >(tc_array.u_min, tc_array.v_max));
-		Vertices[3] = video::S3DVertex(core::vector3df(0+ Card_H, 0, 0- Card_W), core::vector3df(0, 0, -1), video::SColor(255, 255, 255, 255), core::vector2d< f32 >(tc_array.u_min, tc_array.v_min));
+		Vertices[0] = video::S3DVertex(core::vector3df(0+ Card_H, 0, 0+ Card_W), core::vector3df(0, 1, 0), video::SColor(255, 255, 255, 255), core::vector2d< f32 >(tc_array.u_max, tc_array.v_min));
+		Vertices[1] = video::S3DVertex(core::vector3df(0- Card_H, 0, 0+ Card_W), core::vector3df(0, 1, 0), video::SColor(255, 255, 255, 255), core::vector2d< f32 >(tc_array.u_max, tc_array.v_max));
+		Vertices[2] = video::S3DVertex(core::vector3df(0- Card_H, 0, 0- Card_W), core::vector3df(0, 1, 0), video::SColor(255, 255, 255, 255), core::vector2d< f32 >(tc_array.u_min, tc_array.v_max));
+		Vertices[3] = video::S3DVertex(core::vector3df(0+ Card_H, 0, 0- Card_W), core::vector3df(0, 1, 0), video::SColor(255, 255, 255, 255), core::vector2d< f32 >(tc_array.u_min, tc_array.v_min));
 
 		Box.reset(Vertices[0].Pos);
 		for (s32 i = 1; i<4; ++i) Box.addInternalPoint(Vertices[i].Pos);
 
-		setMaterialType(video::EMT_TRANSPARENT_ALPHA_CHANNEL);
+		//setMaterialType(video::EMT_TRANSPARENT_ALPHA_CHANNEL);
 		setMaterialFlag(video::EMF_LIGHTING, false);
+		setMaterialFlag(video::EMF_ZBUFFER, true);
 		if(type.m_col == CardColor::Jocker) setMaterialTexture(0, drv->getTexture("./Media/joker.png"));
 		else setMaterialTexture(0, drv->getTexture("./Media/classic-cards.png"));
-		setScale(irr::core::vector3df(.4, .4, .4));
+		//setScale(irr::core::vector3df(.4, .4, .4));
 	}
 
 	virtual void OnRegisterSceneNode()
