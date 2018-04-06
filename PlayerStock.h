@@ -25,6 +25,26 @@ public:
 		Cards.empty();
 	}
 
+	void treatActivation(irr::scene::ISceneNode *n)
+	{
+		for(auto c : Cards)
+		{
+			if(n == c->Node)
+			{
+				if(!c->activated)
+				{
+					c->activated = true;
+					c->Node->setPosition(c->Node->getPosition()+ irr::core::vector3df(3,0,0));
+				}
+				else
+				{
+					c->activated = false;
+					c->Node->setPosition(c->Node->getPosition()+ irr::core::vector3df(-3,0,0));
+				}
+			}
+		}
+	}
+
 	void SetPosition(irr::core::vector2df p)
 	{
 		ScreenPosition = p;

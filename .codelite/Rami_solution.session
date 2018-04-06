@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="/home/tupac/Rami/Rami_solution.workspace">
-  <int Value="0" Name="m_selectedTab"/>
+  <int Value="1" Name="m_selectedTab"/>
   <wxString Value="/home/tupac/Rami/Rami_solution.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="/home/tupac/Rami/main.cpp" Name="FileName"/>
-      <int Value="44" Name="FirstVisibleLine"/>
-      <int Value="64" Name="CurrentLine"/>
+      <int Value="20" Name="FirstVisibleLine"/>
+      <int Value="29" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/tupac/Rami/PlayerStock.h" Name="FileName"/>
-      <int Value="31" Name="FirstVisibleLine"/>
-      <int Value="59" Name="CurrentLine"/>
+      <int Value="19" Name="FirstVisibleLine"/>
+      <int Value="41" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/tupac/Rami/Card.h" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="7" Name="CurrentLine"/>
+      <int Value="6" Name="FirstVisibleLine"/>
+      <int Value="13" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/tupac/Rami/CardSceneNode.h" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="20" Name="FirstVisibleLine"/>
       <int Value="21" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
@@ -39,9 +39,9 @@
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="/usr/include/irrlicht/ISceneCollisionManager.h" Name="FileName"/>
-      <int Value="22" Name="FirstVisibleLine"/>
-      <int Value="38" Name="CurrentLine"/>
+      <wxString Value="/usr/include/irrlicht/IEventReceiver.h" Name="FileName"/>
+      <int Value="53" Name="FirstVisibleLine"/>
+      <int Value="76" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>

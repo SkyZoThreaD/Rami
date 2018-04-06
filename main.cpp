@@ -15,39 +15,9 @@ scene::ISceneManager* smgr;
 video::IVideoDriver* driver;
 scene::ICameraSceneNode *cam;
 
-
-
-scene::ISceneNode* ScreenPick (s32 x,s32 y,scene::ITriangleSelector* selector)
-{
-		core::line3d<f32> ray;
-        ray.start = cam->getPosition();
-        ray.end = ray.start + (cam->getTarget() - ray.start).normalize() * 1000.0f;
-
-        // Tracks the current intersection point with the level or a mesh
-        core::vector3df intersection;
-        // Used to show with triangle has been hit
-        core::triangle3df hitTriangle;
-
-        // This call is all you need to perform ray/triangle collision on every scene node
-        // that has a triangle selector, including the Quake level mesh.  It finds the nearest
-        // collision point/triangle, and returns the scene node containing that point.
-        // Irrlicht provides other types of selection, including ray/triangle selector,
-        // ray/box and ellipse/triangle selector, plus associated helpers.
-        // See the methods of ISceneCollisionManager
-		
-		scene::ISceneCollisionManager* collMan = smgr->getSceneCollisionManager();
-        scene::ISceneNode * selectedSceneNode =
-            collMan->getSceneNodeAndCollisionPointFromRay(
-                    ray,
-                    intersection, // This will be the position of the collision
-                    hitTriangle, // This will be the triangle hit in the collision
-                    0, // This ensures that only nodes that we have
-                            // set up to be pickable are considered
-                    0); // Check the entire scene (this is actually the implicit default)
-					
-	return selectedSceneNode;
-}
-
+PlayerStock CardGame;
+PlayerStock PlayerGame;
+PlayerStock AIGame;
 
 
 class MyEventReceiver : public IEventReceiver
@@ -57,14 +27,11 @@ public:
 	{
 		if (event.EventType == irr::EET_MOUSE_INPUT_EVENT)
 		{
-			std::cout << "BLA.."<<std::endl;
-			
-			scene::ITriangleSelector* selector = 0;
-			//scene::ISceneNode *n = ScreenPick (event.MouseInput.X, event.MouseInput.Y, selector);
-			
-			scene::ISceneNode *n = smgr->getSceneCollisionManager()->getSceneNodeFromScreenCoordinatesBB(core::position2d<s32>(event.MouseInput.X, event.MouseInput.Y));
-			
-			if(n) n->setPosition( n->getPosition()+core::vector3df(1.0,0.0,0.0) );
+			if(event.MouseInput.Event == EMIE_LMOUSE_PRESSED_DOWN)//event.MouseInput.isLeftPressed())
+			{
+				scene::ISceneNode *n = smgr->getSceneCollisionManager()->getSceneNodeFromScreenCoordinatesBB(core::position2d<s32>(event.MouseInput.X, event.MouseInput.Y));
+				if(n) PlayerGame.treatActivation(n);
+			}
 		}
 		else if (event.EventType == irr::EET_KEY_INPUT_EVENT &&
 			event.KeyInput.Key == KEY_KEY_S && event.KeyInput.PressedDown)
@@ -108,17 +75,14 @@ int main()
 	cam->setFarValue(250.0f);
 
 	// Whole Game init
-	PlayerStock CardGame;
 	fillup_card_game(&CardGame);
 	CardGame.RandomizeOrder();
 	CardGame.SetPosition(irr::core::vector2df(0, -35));
 
 	// Player's Game init
-	PlayerStock PlayerGame;
 	PlayerGame.SetPosition(irr::core::vector2df(-22, -10));
 
 	// Computer's Game init
-	PlayerStock AIGame;
 	AIGame.SetPosition(irr::core::vector2df(22, -10));
 
 	int PlayersTurnToDistribute = 1; // 1 : humans turn to play, 0 : ai
@@ -141,9 +105,7 @@ int main()
 	while(device->run())
 	{
 		driver->beginScene(true, true, video::SColor(0,3,30,3));
-
 		smgr->drawAll();
-
 		driver->endScene();
 		if (++frames==100)
 		{

@@ -13,8 +13,11 @@ public:
 	CardType m_type;
 	irr::scene::ISceneNode *Node;
 	int Val;
+	bool activated;
 
 	Card(CardType t, irr::scene::ISceneNode *n):
 		m_type(t),
-		Node(n){}
+		Node(n),
+		activated(false)
+	{}
 };
