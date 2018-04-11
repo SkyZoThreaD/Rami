@@ -24,7 +24,7 @@ public:
 	{
         // ----------------------- GUI EVENTS -------------
         if (event.EventType == EET_GUI_EVENT)
-        {std::cout<<"YOP"<<std::endl;
+        {
             s32 id = event.GUIEvent.Caller->getID();
             switch(event.GUIEvent.EventType)
             {
@@ -33,7 +33,13 @@ public:
                 {
                 case GUI_ID_QUIT_BUTTON:
                     vars->device->closeDevice();
-                    return true;
+                    return false;
+				case GUI_ID_PUTDOWN_BUTTON:
+					if(vars->CurrentGameState == Player_Put) // useful ?
+					{
+						
+					}
+					return false;
                 }
             }
         }
@@ -59,20 +65,21 @@ public:
                     case GameState::Player_Put:
                         n = vars->smgr->getSceneCollisionManager()->getSceneNodeFromScreenCoordinatesBB(core::position2d<s32>(event.MouseInput.X, event.MouseInput.Y));
                         if(n) vars->PlayerStack->treatActivation(n);
+						if(vars->PlayerStack->howManyActivated() > 0) vars->PutDownBut->setVisible(true);
+						else vars->PutDownBut->setVisible(false);
                         break;
                     case GameState::Computer_Draw:
                     case GameState::Computer_Put:
                         break;
                 }
-                
-				return true;
+				return false;
 			}
 		}
 		else if (event.EventType == irr::EET_KEY_INPUT_EVENT &&
 			event.KeyInput.Key == KEY_KEY_S && event.KeyInput.PressedDown)
 		{
-			return true;
+			return false;
 		}
-		return true;
+		return false;
 	}
 };

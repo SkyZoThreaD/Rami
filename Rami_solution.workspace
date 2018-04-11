@@ -4,9 +4,9 @@
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
-      <Project Name="Rami" ConfigName="Debug_Win32"/>
+      <Project Name="Rami" ConfigName="Debug_Lin"/>
     </WorkspaceConfiguration>
-    <WorkspaceConfiguration Name="Release" Selected="yes">
+    <WorkspaceConfiguration Name="Release" Selected="no">
       <Environment/>
       <Project Name="Rami" ConfigName="Release_Win32"/>
     </WorkspaceConfiguration>

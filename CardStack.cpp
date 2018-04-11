@@ -5,6 +5,41 @@ CardStack::CardStack(CommonVars *_vars):vars(_vars)
     Cards.empty();
 }
 
+
+bool CardStack::isValidCombo()
+{
+	bool sameColor = true;
+	int JokerNb = 0;
+	
+	std::vector<Card*> Combo;
+	// get selected cards
+	for(auto c : Cards)
+		if(c->activated) 
+			if(c->m_type->m_col != Joker) Combo.push_back(c);
+			else JokerNb ++;
+	
+	// check they are all the same color
+	CardColor col = (*Combo.back())->m_type->m_col;
+	for(auto c : Combo) if (c->m_type->m_col != col) &&  sameColor = false;
+	if(sameColor)
+	{
+		// Check if incremental
+		
+	}
+	else
+	{
+		// Check if type is the same.
+	}
+}
+
+int CardStack::howManyActivated()
+{
+	int ret = 0;
+	for( auto c : Cards)
+		if(c->activated) ret++;
+	return ret;
+}
+
 void CardStack::AddCard(Card *n)
 {
     Cards.push_back(n);

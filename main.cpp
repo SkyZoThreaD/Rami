@@ -27,16 +27,6 @@ void distribute(CardStack *Reserve, CardStack *Player, CardStack *CPU)
 	}
 }
 
-void setSkinTransparency(s32 alpha, irr::gui::IGUISkin * skin)
-{
-    for (s32 i=0; i<irr::gui::EGDC_COUNT ; ++i)
-    {
-        video::SColor col = skin->getColor((gui::EGUI_DEFAULT_COLOR)i);
-        col.setAlpha(alpha);
-        skin->setColor((gui::EGUI_DEFAULT_COLOR)i, col);
-    }
-}
-
 int main()
 {
 	// Irrlicht init
@@ -47,22 +37,16 @@ int main()
     
     // -------- create gui ----------
     Vars.env = Vars.device->getGUIEnvironment();
-    Vars.device->setResizable(true);
+    Vars.device->setResizable(false);
     gui::IGUISkin* skin = Vars.env->getSkin();
     /*gui::IGUIFont* font = Vars.env->getFont("./Media/BigFont.png");
     if (font)
         skin->setFont(font);
     skin->setFont(Vars.env->getBuiltInFont(), gui::EGDF_TOOLTIP);*/
-    //setSkinTransparency(255, Vars.env->getSkin());
-    gui::IGUIWindow* window = Vars.env->addWindow(
-                        core::rect<s32>(10 , 10 , 300 , 200 ),
-                        false, // modal?
-                        L"Test window");
-                        
-                         
-    
-    Vars.env->addButton(core::rect<s32>(10,240,110,240 + 32), 0, GUI_ID_QUIT_BUTTON, L"Quit", L"");
-    Vars.env->addButton(core::rect<s32>(10,280,110,280 + 32), 0, GUI_ID_PUTDOWN_BUTTON, L"Put down", L"");
+
+    Vars.env->addButton(core::rect<s32>(1000,740,1200,740 + 48), 0, GUI_ID_QUIT_BUTTON, L"Quit", L"");
+    Vars.PutDownBut = Vars.env->addButton(core::rect<s32>(600,520,750,520 + 48), 0, GUI_ID_PUTDOWN_BUTTON, L"Put down", L"");
+	Vars.PutDownBut->setVisible(false);
     
 	Vars.device->setWindowCaption(L"Loading...");
 	Vars.driver = Vars.device->getVideoDriver();

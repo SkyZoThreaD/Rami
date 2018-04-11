@@ -23,4 +23,5 @@ struct CommonVars
     CardStack *PlayerStack;
     CardStack *CpuStack;
     GameState CurrentGameState;
+	irr::gui::IGUIButton *PutDownBut;
 };

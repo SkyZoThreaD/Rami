@@ -18,6 +18,8 @@ public:
 	void AddCard(Card *n);
 	void empty();
 	void treatActivation(irr::scene::ISceneNode *n);
+	int  howManyActivated();
+	bool isValidCombo();
     bool IsAPartOf(irr::scene::ISceneNode *n);
 	void SetPosition(irr::core::vector2df p);
 	void TransferCardTo(CardStack *other);
