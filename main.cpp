@@ -1,125 +1,122 @@
 #include <irrlicht.h>
 #include "driverChoice.h"
 #include <vector>
-#include "PlayerStock.h"
+#include <mutex>
+#include "CardStack.h"
+#include "EventReceiver.h"
+#include "CommonVars.h"
+#include "CardSceneNode.h"
 
 using namespace irr;
 
 #ifdef _MSC_VER
-#pragma comment(lib, "Irrlicht.lib")
+#pragma comment(lib, "Irrlicht.a")
 #endif
 
-#include "CardSceneNode.h"
+CommonVars Vars;
 
-scene::ISceneManager* smgr;
-video::IVideoDriver* driver;
-scene::ICameraSceneNode *cam;
-
-PlayerStock CardGame;
-PlayerStock PlayerGame;
-PlayerStock AIGame;
-
-
-class MyEventReceiver : public IEventReceiver
+void distribute(CardStack *Reserve, CardStack *Player, CardStack *CPU)
 {
-public:
-	virtual bool OnEvent(const SEvent& event)
-	{
-		if (event.EventType == irr::EET_MOUSE_INPUT_EVENT)
-		{
-			if(event.MouseInput.Event == EMIE_LMOUSE_PRESSED_DOWN)//event.MouseInput.isLeftPressed())
-			{
-				scene::ISceneNode *n = smgr->getSceneCollisionManager()->getSceneNodeFromScreenCoordinatesBB(core::position2d<s32>(event.MouseInput.X, event.MouseInput.Y));
-				if(n) PlayerGame.treatActivation(n);
-			}
-		}
-		else if (event.EventType == irr::EET_KEY_INPUT_EVENT &&
-			event.KeyInput.Key == KEY_KEY_S && event.KeyInput.PressedDown)
-		{
-			return true;
-		}
-		return true;
-	}
-};
+    int PlayersTurnToDistribute = 1; // 1 : humans turn to play, 0 : ai
 
-void fillup_card_game( PlayerStock *stock )
-{
-	CSampleSceneNode *myNode;
-	
-	for( int i=0; i<2; i++)
+	// Distribute 27 cards to players starting with human
+	for (int i = 0; i < 27; i++)
 	{
-		myNode = new CSampleSceneNode(smgr->getRootSceneNode(), smgr, 666, driver, CardType(CardColor::Jocker, 0));
-		stock->AddCard(new Card(CardType(CardColor::Jocker, 0), myNode));
+		if ( (i+PlayersTurnToDistribute) & 1) Vars.ReserveStack->TransferCardTo(Vars.PlayerStack);
+		else Vars.ReserveStack->TransferCardTo(Vars.CpuStack);
 	}
-	
-	for( int color = 0; color < 4; color++ )
-		for ( int nb = 0; nb < 13; nb++ )
-		{
-			myNode = new CSampleSceneNode(smgr->getRootSceneNode(), smgr, 666, driver, CardType((CardColor)color, nb));
-			stock->AddCard(new Card(CardType((CardColor)color, nb), myNode));
-		}
+}
+
+void setSkinTransparency(s32 alpha, irr::gui::IGUISkin * skin)
+{
+    for (s32 i=0; i<irr::gui::EGDC_COUNT ; ++i)
+    {
+        video::SColor col = skin->getColor((gui::EGUI_DEFAULT_COLOR)i);
+        col.setAlpha(alpha);
+        skin->setColor((gui::EGUI_DEFAULT_COLOR)i, col);
+    }
 }
 
 int main()
 {
 	// Irrlicht init
 	video::E_DRIVER_TYPE driverType = video::E_DRIVER_TYPE::EDT_OPENGL;
-	MyEventReceiver receiver;
-	IrrlichtDevice *device = createDevice(driverType, core::dimension2d<u32>(1280, 800), 16, false, false, false, &receiver);
-	if (device == 0) return 1; // could not create selected driver.
-	device->setWindowCaption(L"Loading...");
-	driver = device->getVideoDriver();
-	smgr = device->getSceneManager();
-	cam = smgr->addCameraSceneNode(0, core::vector3df(0,-40,0), core::vector3df(0,0,0));
-	cam->setNearValue(50.0f);
-	cam->setFarValue(250.0f);
+	MyEventReceiver receiver(&Vars);
+	Vars.device = createDevice(driverType, core::dimension2d<u32>(1280, 800), 16, false, false, false, &receiver);
+	if (Vars.device == 0) return 1; // could not create selected driver.
+    
+    // -------- create gui ----------
+    Vars.env = Vars.device->getGUIEnvironment();
+    Vars.device->setResizable(true);
+    gui::IGUISkin* skin = Vars.env->getSkin();
+    /*gui::IGUIFont* font = Vars.env->getFont("./Media/BigFont.png");
+    if (font)
+        skin->setFont(font);
+    skin->setFont(Vars.env->getBuiltInFont(), gui::EGDF_TOOLTIP);*/
+    //setSkinTransparency(255, Vars.env->getSkin());
+    gui::IGUIWindow* window = Vars.env->addWindow(
+                        core::rect<s32>(10 , 10 , 300 , 200 ),
+                        false, // modal?
+                        L"Test window");
+                        
+                         
+    
+    Vars.env->addButton(core::rect<s32>(10,240,110,240 + 32), 0, GUI_ID_QUIT_BUTTON, L"Quit", L"");
+    Vars.env->addButton(core::rect<s32>(10,280,110,280 + 32), 0, GUI_ID_PUTDOWN_BUTTON, L"Put down", L"");
+    
+	Vars.device->setWindowCaption(L"Loading...");
+	Vars.driver = Vars.device->getVideoDriver();
+	Vars.smgr = Vars.device->getSceneManager();
+	Vars.cam = Vars.smgr->addCameraSceneNode(0, core::vector3df(0,-40,0), core::vector3df(0,0,0));
+	Vars.cam->setNearValue(50.0f);
+	Vars.cam->setFarValue(250.0f);
+    
+
+    Vars.ReserveStack = new CardStack(&Vars);
+    Vars.PlayerStack  = new CardStack(&Vars);
+    Vars.CpuStack     = new CardStack(&Vars);
 
 	// Whole Game init
-	fillup_card_game(&CardGame);
-	CardGame.RandomizeOrder();
-	CardGame.SetPosition(irr::core::vector2df(0, -35));
+	Vars.ReserveStack->fillup_card_game();
+	Vars.ReserveStack->RandomizeOrder();
+	Vars.ReserveStack->SetPosition(irr::core::vector2df(0, -35));
 
 	// Player's Game init
-	PlayerGame.SetPosition(irr::core::vector2df(-22, -10));
+	Vars.PlayerStack->SetPosition(irr::core::vector2df(-22, -10));
 
 	// Computer's Game init
-	AIGame.SetPosition(irr::core::vector2df(22, -10));
+	Vars.CpuStack->SetPosition(irr::core::vector2df(22, -10));
 
-	int PlayersTurnToDistribute = 1; // 1 : humans turn to play, 0 : ai
+	distribute(Vars.ReserveStack, Vars.PlayerStack, Vars.CpuStack);
 
-	// Distribute 27 cards to players starting with human
-	for (int i = 0; i < 27; i++)
-	{
-		if ( (i+PlayersTurnToDistribute) & 1) CardGame.TransferCardTo(PlayerGame);
-		else CardGame.TransferCardTo(AIGame);
-	}
-
-	CardGame.refreshPos(false);
-	PlayerGame.refreshPos(true);
-	AIGame.refreshPos(true);	
-
-	/*
-	Now draw everything and finish.
-	*/
+	Vars.ReserveStack->refreshPos(false);
+	Vars.PlayerStack->refreshPos(true);
+	Vars.CpuStack->refreshPos(true);
+    
+    Vars.CurrentGameState = Player_Draw;
+/*
+ * --------------------------- Frame Loop -------------------------
+*/
 	u32 frames=0;
-	while(device->run())
+	while(Vars.device->run())
 	{
-		driver->beginScene(true, true, video::SColor(0,3,30,3));
-		smgr->drawAll();
-		driver->endScene();
+		Vars.driver->beginScene(true, true, video::SColor(0,3,30,3));
+		Vars.smgr->drawAll();
+        Vars.env->drawAll();
+		Vars.driver->endScene();
 		if (++frames==100)
 		{
 			core::stringw str = L"Rami by SkyZoThreaD [";
-			str += driver->getName();
+			str += Vars.driver->getName();
 			str += L"] FPS: ";
-			str += (s32)driver->getFPS();
+			str += (s32)Vars.driver->getFPS();
 
-			device->setWindowCaption(str.c_str());
+			Vars.device->setWindowCaption(str.c_str());
 			frames=0;
 		}
 	}
 
-	device->drop();
+	Vars.device->drop();
 	
 	return 0;
 }

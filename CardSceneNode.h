@@ -2,7 +2,9 @@
 
 #include "CardType.h"
 
-class CSampleSceneNode : public scene::ISceneNode
+using namespace irr;
+
+class CardSceneNode : public scene::ISceneNode
 {
 	core::aabbox3d<f32> Box;
 	video::S3DVertex Vertices[4];
@@ -10,7 +12,7 @@ class CSampleSceneNode : public scene::ISceneNode
 
 public:
 
-	CSampleSceneNode(scene::ISceneNode* parent, scene::ISceneManager* mgr, s32 id, video::IVideoDriver *drv, CardType type) : scene::ISceneNode(parent, mgr, id)
+	CardSceneNode(scene::ISceneNode* parent, scene::ISceneManager* mgr, s32 id, video::IVideoDriver *drv, CardType type) : scene::ISceneNode(parent, mgr, id)
 	{
 		Material.Wireframe = false;
 		Material.Lighting = false;
@@ -18,7 +20,7 @@ public:
 		f32 Card_W = 10/2;
 		f32 Card_H = 15/2;
 
-		TC_area tc_array = TC_from_CardType(type);
+		struct TC_area tc_array = TC_from_CardType(type);
 
 		Vertices[0] = video::S3DVertex(core::vector3df(0+ Card_H, 0, 0+ Card_W), core::vector3df(0, 1, 0), video::SColor(255, 255, 255, 255), core::vector2d< f32 >(tc_array.u_max, tc_array.v_min));
 		Vertices[1] = video::S3DVertex(core::vector3df(0- Card_H, 0, 0+ Card_W), core::vector3df(0, 1, 0), video::SColor(255, 255, 255, 255), core::vector2d< f32 >(tc_array.u_max, tc_array.v_max));

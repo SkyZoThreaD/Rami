@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="Rami" Version="10.0.0">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0011Debug_Win32000000000000]]>
+    </Plugin>
+  </Plugins>
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
     <File Name="main.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
+    <File Name="CardStack.cpp"/>
+    <File Name="CardStack.h"/>
+    <File Name="CardType.cpp"/>
+    <File Name="CommonVars.h"/>
+    <File Name="EventReceiver.h"/>
     <File Name="Card.h"/>
     <File Name="CardSceneNode.h"/>
     <File Name="CardType.h"/>
-    <File Name="PlayerStock.h"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
@@ -29,12 +38,12 @@
         <Preprocessor Value="_CONSOLE"/>
       </Compiler>
       <Linker Options="-O0" Required="yes">
-        <LibraryPath Value="C:\irrlicht-1.8.4\lib\Win32-visualstudio"/>
-        <LibraryPath Value="..\..\lib\Win32-visualstudio"/>
+        <LibraryPath Value="C:\irrlicht-1.8.4\lib\Win32-gcc"/>
+        <LibraryPath Value="..\..\lib\Win32-gcc"/>
         <Library Value="Irrlicht"/>
       </Linker>
       <ResourceCompiler Options="" Required="no"/>
-      <General OutputFile="Rami" IntermediateDirectory="./Debug/" Command="./Rami" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="./" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <General OutputFile="Rami" IntermediateDirectory="./Debug/" Command="./Rami.exe" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="./" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="Default"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[VS_Configuration=Debug
