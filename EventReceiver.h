@@ -37,7 +37,21 @@ public:
 				case GUI_ID_PUTDOWN_BUTTON:
 					if(vars->CurrentGameState == Player_Put) // useful ?
 					{
-						
+                        ComboType combT = vars->PlayerStack->getComboType();
+						if(combT.Cards.size() == 1) // throwing out a card
+                        {
+                            vars->PlayerStack->TransferCardTo(vars->TrashStack, combT.Cards[0]);
+                            vars->CurrentGameState = Computer_Draw; // switch state
+                        }
+                        else if(combT.Cards.size() > 1) // putting down a combo
+                        {
+                            CardStack *nStack = new CardStack(vars);
+                            for( auto c : combT.Cards )
+                                vars->PlayerStack->TransferCardTo(nStack, c);
+                            vars->StacksOnTable.push_back(nStack);
+                            nStack->SetPosition(core::vector2df(0,0));
+                            nStack->refreshPos(true);
+                        }
 					}
 					return false;
                 }

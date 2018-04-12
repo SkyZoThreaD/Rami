@@ -11,7 +11,7 @@ enum CardColor {
 	Tile,
 	Clover,
 	Pike,
-	Jocker
+	Joker
 };
 
 struct TC_area

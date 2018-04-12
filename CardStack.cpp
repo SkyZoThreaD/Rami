@@ -5,8 +5,7 @@ CardStack::CardStack(CommonVars *_vars):vars(_vars)
     Cards.empty();
 }
 
-
-bool CardStack::isValidCombo()
+bool CardStack::putCombo()
 {
 	bool sameColor = true;
 	int JokerNb = 0;
@@ -15,21 +14,73 @@ bool CardStack::isValidCombo()
 	// get selected cards
 	for(auto c : Cards)
 		if(c->activated) 
-			if(c->m_type->m_col != Joker) Combo.push_back(c);
-			else JokerNb ++;
+			if(c->m_type.m_col != Joker) Combo.push_back(c); // trick : remove jokes from selection
+			else JokerNb ++;                                 // so i can do what follows...
 	
 	// check they are all the same color
-	CardColor col = (*Combo.back())->m_type->m_col;
-	for(auto c : Combo) if (c->m_type->m_col != col) &&  sameColor = false;
+	CardColor col = ( *(Combo.back()) ).m_type.m_col; // pick the color of one
+	for(auto c : Combo) if (c->m_type.m_col != col) sameColor = false; // compare to all other
 	if(sameColor)
 	{
-		// Check if incremental
-		
+		// might be a Run...
+        Card *lowest, *last = nullptr;
+        int consecutive = 0;
+		while(Combo.size() > 0)
+        {
+            lowest = nullptr;
+            for( auto c : Combo ) // identify lowest card
+            {
+                if(lowest == nullptr) // first
+                    lowest = c;
+                else if(c->m_type.m_val < lowest->m_type.m_val)
+                    lowest = c;
+            }
+            if(last != nullptr) // not first
+            {
+                // check how many Jockers we need
+                int jokneed = lowest->m_type.m_val - last->m_type.m_val;
+                if(jokneed <= JokerNb)
+                {
+                    JokerNb -= jokneed;
+                    for(int i=0; i<jokneed; i++) // put joks
+                    {
+                        Card *j = getFirstJoker();
+                        if(j!=nullptr) ret.Cards.push_back( j );
+                    }
+                    ret.Cards.push_back( lowest );
+                    consecutive += jokneed + 1;
+                }
+                else
+                {
+                    if(consecutive >= 3) // run is long enough
+                        return true; 
+                    else
+                        
+                        return false; 
+                }
+            }
+            else
+            {
+                ret.Cards.push_back( lowest ); // first lap
+                
+            }
+            
+            last = lowest;
+        }
 	}
 	else
 	{
-		// Check if type is the same.
+		// might be a trip or more
+        
 	}
+    return false;
+}
+
+Card *CardStack::getFirstJoker()
+{
+    for( auto c : Cards )
+        if(c->m_type.m_col == Joker) return c;
+    return nullptr;
 }
 
 int CardStack::howManyActivated()
@@ -81,8 +132,17 @@ void CardStack::SetPosition(irr::core::vector2df p)
     ScreenPosition = p;
 }
 
-void CardStack::TransferCardTo(CardStack *other)
+void CardStack::TransferCardTo(CardStack *other, Card *card)
 {
+    if(card != nullptr)
+    {
+        for( std::vector<Card*>::iterator it = Cards.begin(); it != Cards.end(); ++it )
+            if( (*it)->Node == card->Node) // found card
+            {
+                other->Cards.push_back(*it);
+                Cards.erase(it);
+            }
+    }
     other->Cards.push_back(Cards.back());
     Cards.pop_back();
 }
@@ -126,8 +186,8 @@ void CardStack::fillup_card_game()
         
     for( int i=0; i<2; i++)
     {
-        myNode = new CardSceneNode(vars->smgr->getRootSceneNode(), vars->smgr, 666, vars->driver, CardType(CardColor::Jocker, 0));
-        AddCard(new Card(CardType(CardColor::Jocker, 0), myNode));
+        myNode = new CardSceneNode(vars->smgr->getRootSceneNode(), vars->smgr, 666, vars->driver, CardType(Joker, 0));
+        AddCard(new Card(CardType(Joker, 0), myNode));
     }
         
     for( int color = 0; color < 4; color++ )

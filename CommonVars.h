@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CardStack.h"
+#include <vector>
 
 class CardStack;
 
@@ -24,4 +25,5 @@ struct CommonVars
     CardStack *CpuStack;
     GameState CurrentGameState;
 	irr::gui::IGUIButton *PutDownBut;
+    std::vector<CardStack*> StacksOnTable;
 };

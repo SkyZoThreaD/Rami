@@ -1,1 +1,1 @@
-./Debug//main.cpp.o ./Debug//CardType.cpp.o ./Debug//CardStack.cpp.o
+./Debug//CardType.cpp.o ./Debug//main.cpp.o ./Debug//CardStack.cpp.o   
