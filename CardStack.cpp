@@ -10,12 +10,21 @@ bool CardStack::putCombo()
 	bool sameColor = true;
 	int JokerNb = 0;
 	
-	std::vector<Card*> Combo;
+	std::vector<Card*> Combo, GoodCombo;
 	// get selected cards
 	for(auto c : Cards)
 		if(c->activated) 
 			if(c->m_type.m_col != Joker) Combo.push_back(c); // trick : remove jokes from selection
 			else JokerNb ++;                                 // so i can do what follows...
+	
+	// If only one card is selected, throw it to the trash
+	if(Combo.size() == 1)
+	{
+		TransferCardTo(vars->TrashStack, Combo[0]);
+		refreshPos(true);
+		vars->TrashStack->refreshPos(false);
+		vars->CurrentGameState = Computer_Draw; // switch state
+	}
 	
 	// check they are all the same color
 	CardColor col = ( *(Combo.back()) ).m_type.m_col; // pick the color of one
@@ -45,26 +54,33 @@ bool CardStack::putCombo()
                     for(int i=0; i<jokneed; i++) // put joks
                     {
                         Card *j = getFirstJoker();
-                        if(j!=nullptr) ret.Cards.push_back( j );
+                        if(j!=nullptr) GoodCombo.push_back( j );
                     }
-                    ret.Cards.push_back( lowest );
+                    GoodCombo.push_back( lowest );
                     consecutive += jokneed + 1;
                 }
                 else
                 {
-                    if(consecutive >= 3) // run is long enough
-                        return true; 
+                    if(consecutive >= 3) // run is long enough Actually transfer it 
+					{
+						//Create the stack
+						CardStack *nStack = new CardStack(vars);
+						vars->StacksOnTable.push_back(nStack);
+						nStack->SetPosition(core::vector2df(0,0));
+						//transfer cards to it
+						for(auto c : GoodCombo)
+							TransferCardTo(nStack, c);
+						nStack->refreshPos(true);
+							return true; 
+					}
                     else
-                        
                         return false; 
                 }
             }
             else
             {
-                ret.Cards.push_back( lowest ); // first lap
-                
+                GoodCombo.push_back( lowest ); // first lap
             }
-            
             last = lowest;
         }
 	}

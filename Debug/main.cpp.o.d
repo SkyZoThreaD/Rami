@@ -1,539 +1,514 @@
-Debug//main.cpp.o: main.cpp C:/irrlicht-1.8.4/include/irrlicht.h \
- C:/irrlicht-1.8.4/include/IrrCompileConfig.h \
- C:/irrlicht-1.8.4/include/aabbox3d.h C:/irrlicht-1.8.4/include/irrMath.h \
- C:/irrlicht-1.8.4/include/irrTypes.h C:/irrlicht-1.8.4/include/plane3d.h \
- C:/irrlicht-1.8.4/include/vector3d.h C:/irrlicht-1.8.4/include/line3d.h \
- C:/irrlicht-1.8.4/include/CDynamicMeshBuffer.h \
- C:/irrlicht-1.8.4/include/IDynamicMeshBuffer.h \
- C:/irrlicht-1.8.4/include/IMeshBuffer.h \
- C:/irrlicht-1.8.4/include/IReferenceCounted.h \
- C:/irrlicht-1.8.4/include/SMaterial.h C:/irrlicht-1.8.4/include/SColor.h \
- C:/irrlicht-1.8.4/include/matrix4.h C:/irrlicht-1.8.4/include/vector2d.h \
- C:/irrlicht-1.8.4/include/dimension2d.h C:/irrlicht-1.8.4/include/rect.h \
- C:/irrlicht-1.8.4/include/position2d.h \
- C:/irrlicht-1.8.4/include/irrString.h \
- C:/irrlicht-1.8.4/include/irrAllocator.h \
- C:/irrlicht-1.8.4/include/irrArray.h \
- C:/irrlicht-1.8.4/include/heapsort.h \
- C:/irrlicht-1.8.4/include/EMaterialTypes.h \
- C:/irrlicht-1.8.4/include/EMaterialFlags.h \
- C:/irrlicht-1.8.4/include/SMaterialLayer.h \
- C:/irrlicht-1.8.4/include/S3DVertex.h \
- C:/irrlicht-1.8.4/include/SVertexIndex.h \
- C:/irrlicht-1.8.4/include/EHardwareBufferFlags.h \
- C:/irrlicht-1.8.4/include/EPrimitiveTypes.h \
- C:/irrlicht-1.8.4/include/IVertexBuffer.h \
- C:/irrlicht-1.8.4/include/IIndexBuffer.h \
- C:/irrlicht-1.8.4/include/CVertexBuffer.h \
- C:/irrlicht-1.8.4/include/CIndexBuffer.h \
- C:/irrlicht-1.8.4/include/CMeshBuffer.h \
- C:/irrlicht-1.8.4/include/coreutil.h C:/irrlicht-1.8.4/include/path.h \
- C:/irrlicht-1.8.4/include/ECullingTypes.h \
- C:/irrlicht-1.8.4/include/EDebugSceneTypes.h \
- C:/irrlicht-1.8.4/include/EDriverFeatures.h \
- C:/irrlicht-1.8.4/include/EDriverTypes.h \
- C:/irrlicht-1.8.4/include/EGUIAlignment.h \
- C:/irrlicht-1.8.4/include/EGUIElementTypes.h \
- C:/irrlicht-1.8.4/include/EMeshWriterEnums.h \
- C:/irrlicht-1.8.4/include/EMessageBoxFlags.h \
- C:/irrlicht-1.8.4/include/ESceneNodeAnimatorTypes.h \
- C:/irrlicht-1.8.4/include/ESceneNodeTypes.h \
- C:/irrlicht-1.8.4/include/ETerrainElements.h \
- C:/irrlicht-1.8.4/include/fast_atof.h \
- C:/irrlicht-1.8.4/include/IAnimatedMesh.h \
- C:/irrlicht-1.8.4/include/IMesh.h \
- C:/irrlicht-1.8.4/include/IAnimatedMeshMD2.h \
- C:/irrlicht-1.8.4/include/IAnimatedMeshMD3.h \
- C:/irrlicht-1.8.4/include/IQ3Shader.h \
- C:/irrlicht-1.8.4/include/IFileSystem.h \
- C:/irrlicht-1.8.4/include/IXMLReader.h \
- C:/irrlicht-1.8.4/include/irrXML.h \
- C:/irrlicht-1.8.4/include/IFileArchive.h \
- C:/irrlicht-1.8.4/include/IReadFile.h \
- C:/irrlicht-1.8.4/include/IFileList.h \
- C:/irrlicht-1.8.4/include/IVideoDriver.h \
- C:/irrlicht-1.8.4/include/ITexture.h C:/irrlicht-1.8.4/include/IImage.h \
- C:/irrlicht-1.8.4/include/triangle3d.h \
- C:/irrlicht-1.8.4/include/SExposedVideoData.h \
- C:/irrlicht-1.8.4/include/quaternion.h \
- C:/irrlicht-1.8.4/include/irrpack.h \
- C:/irrlicht-1.8.4/include/irrunpack.h \
- C:/irrlicht-1.8.4/include/IAnimatedMeshSceneNode.h \
- C:/irrlicht-1.8.4/include/ISceneNode.h \
- C:/irrlicht-1.8.4/include/IAttributeExchangingObject.h \
- C:/irrlicht-1.8.4/include/ISceneNodeAnimator.h \
- C:/irrlicht-1.8.4/include/IEventReceiver.h \
- C:/irrlicht-1.8.4/include/ILogger.h C:/irrlicht-1.8.4/include/Keycodes.h \
- C:/irrlicht-1.8.4/include/ITriangleSelector.h \
- C:/irrlicht-1.8.4/include/irrList.h \
- C:/irrlicht-1.8.4/include/IAttributes.h \
- C:/irrlicht-1.8.4/include/line2d.h \
- C:/irrlicht-1.8.4/include/EAttributes.h \
- C:/irrlicht-1.8.4/include/IBoneSceneNode.h \
- C:/irrlicht-1.8.4/include/IBillboardSceneNode.h \
- C:/irrlicht-1.8.4/include/IBillboardTextSceneNode.h \
- C:/irrlicht-1.8.4/include/ICameraSceneNode.h \
- C:/irrlicht-1.8.4/include/ICursorControl.h \
- C:/irrlicht-1.8.4/include/IDummyTransformationSceneNode.h \
- C:/irrlicht-1.8.4/include/IGeometryCreator.h \
- C:/irrlicht-1.8.4/include/IGPUProgrammingServices.h \
- C:/irrlicht-1.8.4/include/EShaderTypes.h \
- C:/irrlicht-1.8.4/include/IGUIButton.h \
- C:/irrlicht-1.8.4/include/IGUIElement.h \
- C:/irrlicht-1.8.4/include/IGUICheckBox.h \
- C:/irrlicht-1.8.4/include/IGUIColorSelectDialog.h \
- C:/irrlicht-1.8.4/include/IGUIComboBox.h \
- C:/irrlicht-1.8.4/include/IGUIContextMenu.h \
- C:/irrlicht-1.8.4/include/IGUIEditBox.h \
- C:/irrlicht-1.8.4/include/IGUIElementFactory.h \
- C:/irrlicht-1.8.4/include/IGUIEnvironment.h \
- C:/irrlicht-1.8.4/include/IGUISkin.h \
- C:/irrlicht-1.8.4/include/IGUIFileOpenDialog.h \
- C:/irrlicht-1.8.4/include/IGUIFont.h \
- C:/irrlicht-1.8.4/include/IGUIFontBitmap.h \
- C:/irrlicht-1.8.4/include/IGUIImage.h \
- C:/irrlicht-1.8.4/include/IGUIInOutFader.h \
- C:/irrlicht-1.8.4/include/IGUIListBox.h \
- C:/irrlicht-1.8.4/include/IGUIMeshViewer.h \
- C:/irrlicht-1.8.4/include/IGUIScrollBar.h \
- C:/irrlicht-1.8.4/include/IGUISpinBox.h \
- C:/irrlicht-1.8.4/include/IGUISpriteBank.h \
- C:/irrlicht-1.8.4/include/IGUIStaticText.h \
- C:/irrlicht-1.8.4/include/IGUITabControl.h \
- C:/irrlicht-1.8.4/include/IGUITable.h \
- C:/irrlicht-1.8.4/include/IGUIToolbar.h \
- C:/irrlicht-1.8.4/include/IGUIWindow.h \
- C:/irrlicht-1.8.4/include/IGUITreeView.h \
- C:/irrlicht-1.8.4/include/IGUIImageList.h \
- C:/irrlicht-1.8.4/include/IImageLoader.h \
- C:/irrlicht-1.8.4/include/IImageWriter.h \
- C:/irrlicht-1.8.4/include/ILightSceneNode.h \
- C:/irrlicht-1.8.4/include/SLight.h \
- C:/irrlicht-1.8.4/include/IMaterialRenderer.h \
- C:/irrlicht-1.8.4/include/IMaterialRendererServices.h \
- C:/irrlicht-1.8.4/include/IMeshCache.h \
- C:/irrlicht-1.8.4/include/IMeshLoader.h \
- C:/irrlicht-1.8.4/include/IMeshManipulator.h \
- C:/irrlicht-1.8.4/include/SVertexManipulator.h \
- C:/irrlicht-1.8.4/include/IMeshSceneNode.h \
- C:/irrlicht-1.8.4/include/IMeshWriter.h \
- C:/irrlicht-1.8.4/include/IColladaMeshWriter.h \
- C:/irrlicht-1.8.4/include/IMetaTriangleSelector.h \
- C:/irrlicht-1.8.4/include/IOSOperator.h \
- C:/irrlicht-1.8.4/include/IParticleSystemSceneNode.h \
- C:/irrlicht-1.8.4/include/IParticleAnimatedMeshSceneNodeEmitter.h \
- C:/irrlicht-1.8.4/include/IParticleEmitter.h \
- C:/irrlicht-1.8.4/include/SParticle.h \
- C:/irrlicht-1.8.4/include/IParticleBoxEmitter.h \
- C:/irrlicht-1.8.4/include/IParticleCylinderEmitter.h \
- C:/irrlicht-1.8.4/include/IParticleMeshEmitter.h \
- C:/irrlicht-1.8.4/include/IParticleRingEmitter.h \
- C:/irrlicht-1.8.4/include/IParticleSphereEmitter.h \
- C:/irrlicht-1.8.4/include/IParticleAttractionAffector.h \
- C:/irrlicht-1.8.4/include/IParticleAffector.h \
- C:/irrlicht-1.8.4/include/IParticleFadeOutAffector.h \
- C:/irrlicht-1.8.4/include/IParticleGravityAffector.h \
- C:/irrlicht-1.8.4/include/IParticleRotationAffector.h \
- C:/irrlicht-1.8.4/include/IQ3LevelMesh.h \
- C:/irrlicht-1.8.4/include/IRandomizer.h \
- C:/irrlicht-1.8.4/include/IrrlichtDevice.h \
- C:/irrlicht-1.8.4/include/EDeviceTypes.h \
- C:/irrlicht-1.8.4/include/IVideoModeList.h \
- C:/irrlicht-1.8.4/include/ITimer.h C:/irrlicht-1.8.4/include/irrMap.h \
- C:/irrlicht-1.8.4/include/ISceneCollisionManager.h \
- C:/irrlicht-1.8.4/include/ISceneLoader.h \
- C:/irrlicht-1.8.4/include/ISceneManager.h \
- C:/irrlicht-1.8.4/include/SceneParameters.h \
- C:/irrlicht-1.8.4/include/ISkinnedMesh.h \
- C:/irrlicht-1.8.4/include/SSkinMeshBuffer.h \
- C:/irrlicht-1.8.4/include/ISceneNodeAnimatorCameraFPS.h \
- C:/irrlicht-1.8.4/include/ISceneNodeAnimatorCameraMaya.h \
- C:/irrlicht-1.8.4/include/ISceneNodeAnimatorCollisionResponse.h \
- C:/irrlicht-1.8.4/include/ISceneNodeAnimatorFactory.h \
- C:/irrlicht-1.8.4/include/ISceneNodeFactory.h \
- C:/irrlicht-1.8.4/include/ISceneUserDataSerializer.h \
- C:/irrlicht-1.8.4/include/IShaderConstantSetCallBack.h \
- C:/irrlicht-1.8.4/include/IShadowVolumeSceneNode.h \
- C:/irrlicht-1.8.4/include/ITerrainSceneNode.h \
- C:/irrlicht-1.8.4/include/ITextSceneNode.h \
- C:/irrlicht-1.8.4/include/IVolumeLightSceneNode.h \
- C:/irrlicht-1.8.4/include/IWriteFile.h \
- C:/irrlicht-1.8.4/include/IXMLWriter.h \
- C:/irrlicht-1.8.4/include/ILightManager.h \
- C:/irrlicht-1.8.4/include/SAnimatedMesh.h \
- C:/irrlicht-1.8.4/include/SIrrCreationParameters.h \
- C:/irrlicht-1.8.4/include/SKeyMap.h C:/irrlicht-1.8.4/include/SMesh.h \
- C:/irrlicht-1.8.4/include/SMeshBuffer.h \
- C:/irrlicht-1.8.4/include/SMeshBufferLightMap.h \
- C:/irrlicht-1.8.4/include/SMeshBufferTangents.h \
- C:/irrlicht-1.8.4/include/SSharedMeshBuffer.h \
- C:/irrlicht-1.8.4/include/SViewFrustum.h \
- C:/irrlicht-1.8.4/include/driverChoice.h CardStack.h Card.h CardType.h \
+Debug//main.cpp.o: main.cpp /usr/include/irrlicht/irrlicht.h \
+ /usr/include/irrlicht/IrrCompileConfig.h \
+ /usr/include/irrlicht/aabbox3d.h /usr/include/irrlicht/irrMath.h \
+ /usr/include/irrlicht/irrTypes.h /usr/include/irrlicht/plane3d.h \
+ /usr/include/irrlicht/vector3d.h /usr/include/irrlicht/line3d.h \
+ /usr/include/irrlicht/CDynamicMeshBuffer.h \
+ /usr/include/irrlicht/IDynamicMeshBuffer.h \
+ /usr/include/irrlicht/IMeshBuffer.h \
+ /usr/include/irrlicht/IReferenceCounted.h \
+ /usr/include/irrlicht/SMaterial.h /usr/include/irrlicht/SColor.h \
+ /usr/include/irrlicht/matrix4.h /usr/include/irrlicht/vector2d.h \
+ /usr/include/irrlicht/dimension2d.h /usr/include/irrlicht/rect.h \
+ /usr/include/irrlicht/position2d.h /usr/include/irrlicht/irrString.h \
+ /usr/include/irrlicht/irrAllocator.h /usr/include/irrlicht/irrArray.h \
+ /usr/include/irrlicht/heapsort.h /usr/include/irrlicht/EMaterialTypes.h \
+ /usr/include/irrlicht/EMaterialFlags.h \
+ /usr/include/irrlicht/SMaterialLayer.h /usr/include/irrlicht/S3DVertex.h \
+ /usr/include/irrlicht/SVertexIndex.h \
+ /usr/include/irrlicht/EHardwareBufferFlags.h \
+ /usr/include/irrlicht/EPrimitiveTypes.h \
+ /usr/include/irrlicht/IVertexBuffer.h \
+ /usr/include/irrlicht/IIndexBuffer.h \
+ /usr/include/irrlicht/CVertexBuffer.h \
+ /usr/include/irrlicht/CIndexBuffer.h /usr/include/irrlicht/CMeshBuffer.h \
+ /usr/include/irrlicht/coreutil.h /usr/include/irrlicht/path.h \
+ /usr/include/irrlicht/ECullingTypes.h \
+ /usr/include/irrlicht/EDebugSceneTypes.h \
+ /usr/include/irrlicht/EDriverFeatures.h \
+ /usr/include/irrlicht/EDriverTypes.h \
+ /usr/include/irrlicht/EGUIAlignment.h \
+ /usr/include/irrlicht/EGUIElementTypes.h \
+ /usr/include/irrlicht/EMeshWriterEnums.h \
+ /usr/include/irrlicht/EMessageBoxFlags.h \
+ /usr/include/irrlicht/ESceneNodeAnimatorTypes.h \
+ /usr/include/irrlicht/ESceneNodeTypes.h \
+ /usr/include/irrlicht/ETerrainElements.h \
+ /usr/include/irrlicht/fast_atof.h /usr/include/irrlicht/IAnimatedMesh.h \
+ /usr/include/irrlicht/IMesh.h /usr/include/irrlicht/IAnimatedMeshMD2.h \
+ /usr/include/irrlicht/IAnimatedMeshMD3.h \
+ /usr/include/irrlicht/IQ3Shader.h /usr/include/irrlicht/IFileSystem.h \
+ /usr/include/irrlicht/IXMLReader.h /usr/include/irrlicht/irrXML.h \
+ /usr/include/irrlicht/IFileArchive.h /usr/include/irrlicht/IReadFile.h \
+ /usr/include/irrlicht/IFileList.h /usr/include/irrlicht/IVideoDriver.h \
+ /usr/include/irrlicht/ITexture.h /usr/include/irrlicht/IImage.h \
+ /usr/include/irrlicht/triangle3d.h \
+ /usr/include/irrlicht/SExposedVideoData.h \
+ /usr/include/irrlicht/quaternion.h /usr/include/irrlicht/irrpack.h \
+ /usr/include/irrlicht/irrunpack.h \
+ /usr/include/irrlicht/IAnimatedMeshSceneNode.h \
+ /usr/include/irrlicht/ISceneNode.h \
+ /usr/include/irrlicht/IAttributeExchangingObject.h \
+ /usr/include/irrlicht/ISceneNodeAnimator.h \
+ /usr/include/irrlicht/IEventReceiver.h /usr/include/irrlicht/ILogger.h \
+ /usr/include/irrlicht/Keycodes.h \
+ /usr/include/irrlicht/ITriangleSelector.h \
+ /usr/include/irrlicht/irrList.h /usr/include/irrlicht/IAttributes.h \
+ /usr/include/irrlicht/line2d.h /usr/include/irrlicht/EAttributes.h \
+ /usr/include/irrlicht/IBoneSceneNode.h \
+ /usr/include/irrlicht/IBillboardSceneNode.h \
+ /usr/include/irrlicht/IBillboardTextSceneNode.h \
+ /usr/include/irrlicht/ICameraSceneNode.h \
+ /usr/include/irrlicht/ICursorControl.h \
+ /usr/include/irrlicht/IDummyTransformationSceneNode.h \
+ /usr/include/irrlicht/IGeometryCreator.h \
+ /usr/include/irrlicht/IGPUProgrammingServices.h \
+ /usr/include/irrlicht/EShaderTypes.h /usr/include/irrlicht/IGUIButton.h \
+ /usr/include/irrlicht/IGUIElement.h /usr/include/irrlicht/IGUICheckBox.h \
+ /usr/include/irrlicht/IGUIColorSelectDialog.h \
+ /usr/include/irrlicht/IGUIComboBox.h \
+ /usr/include/irrlicht/IGUIContextMenu.h \
+ /usr/include/irrlicht/IGUIEditBox.h \
+ /usr/include/irrlicht/IGUIElementFactory.h \
+ /usr/include/irrlicht/IGUIEnvironment.h /usr/include/irrlicht/IGUISkin.h \
+ /usr/include/irrlicht/IGUIFileOpenDialog.h \
+ /usr/include/irrlicht/IGUIFont.h /usr/include/irrlicht/IGUIFontBitmap.h \
+ /usr/include/irrlicht/IGUIImage.h /usr/include/irrlicht/IGUIInOutFader.h \
+ /usr/include/irrlicht/IGUIListBox.h \
+ /usr/include/irrlicht/IGUIMeshViewer.h \
+ /usr/include/irrlicht/IGUIScrollBar.h \
+ /usr/include/irrlicht/IGUISpinBox.h \
+ /usr/include/irrlicht/IGUISpriteBank.h \
+ /usr/include/irrlicht/IGUIStaticText.h \
+ /usr/include/irrlicht/IGUITabControl.h /usr/include/irrlicht/IGUITable.h \
+ /usr/include/irrlicht/IGUIToolbar.h /usr/include/irrlicht/IGUIWindow.h \
+ /usr/include/irrlicht/IGUITreeView.h \
+ /usr/include/irrlicht/IGUIImageList.h \
+ /usr/include/irrlicht/IImageLoader.h \
+ /usr/include/irrlicht/IImageWriter.h \
+ /usr/include/irrlicht/ILightSceneNode.h /usr/include/irrlicht/SLight.h \
+ /usr/include/irrlicht/IMaterialRenderer.h \
+ /usr/include/irrlicht/IMaterialRendererServices.h \
+ /usr/include/irrlicht/IMeshCache.h /usr/include/irrlicht/IMeshLoader.h \
+ /usr/include/irrlicht/IMeshManipulator.h \
+ /usr/include/irrlicht/SVertexManipulator.h \
+ /usr/include/irrlicht/IMeshSceneNode.h \
+ /usr/include/irrlicht/IMeshWriter.h \
+ /usr/include/irrlicht/IColladaMeshWriter.h \
+ /usr/include/irrlicht/IMetaTriangleSelector.h \
+ /usr/include/irrlicht/IOSOperator.h \
+ /usr/include/irrlicht/IParticleSystemSceneNode.h \
+ /usr/include/irrlicht/IParticleAnimatedMeshSceneNodeEmitter.h \
+ /usr/include/irrlicht/IParticleEmitter.h \
+ /usr/include/irrlicht/SParticle.h \
+ /usr/include/irrlicht/IParticleBoxEmitter.h \
+ /usr/include/irrlicht/IParticleCylinderEmitter.h \
+ /usr/include/irrlicht/IParticleMeshEmitter.h \
+ /usr/include/irrlicht/IParticleRingEmitter.h \
+ /usr/include/irrlicht/IParticleSphereEmitter.h \
+ /usr/include/irrlicht/IParticleAttractionAffector.h \
+ /usr/include/irrlicht/IParticleAffector.h \
+ /usr/include/irrlicht/IParticleFadeOutAffector.h \
+ /usr/include/irrlicht/IParticleGravityAffector.h \
+ /usr/include/irrlicht/IParticleRotationAffector.h \
+ /usr/include/irrlicht/IQ3LevelMesh.h /usr/include/irrlicht/IRandomizer.h \
+ /usr/include/irrlicht/IrrlichtDevice.h \
+ /usr/include/irrlicht/EDeviceTypes.h \
+ /usr/include/irrlicht/IVideoModeList.h /usr/include/irrlicht/ITimer.h \
+ /usr/include/irrlicht/irrMap.h \
+ /usr/include/irrlicht/ISceneCollisionManager.h \
+ /usr/include/irrlicht/ISceneLoader.h \
+ /usr/include/irrlicht/ISceneManager.h \
+ /usr/include/irrlicht/SceneParameters.h \
+ /usr/include/irrlicht/ISkinnedMesh.h \
+ /usr/include/irrlicht/SSkinMeshBuffer.h \
+ /usr/include/irrlicht/ISceneNodeAnimatorCameraFPS.h \
+ /usr/include/irrlicht/ISceneNodeAnimatorCameraMaya.h \
+ /usr/include/irrlicht/ISceneNodeAnimatorCollisionResponse.h \
+ /usr/include/irrlicht/ISceneNodeAnimatorFactory.h \
+ /usr/include/irrlicht/ISceneNodeFactory.h \
+ /usr/include/irrlicht/ISceneUserDataSerializer.h \
+ /usr/include/irrlicht/IShaderConstantSetCallBack.h \
+ /usr/include/irrlicht/IShadowVolumeSceneNode.h \
+ /usr/include/irrlicht/ITerrainSceneNode.h \
+ /usr/include/irrlicht/ITextSceneNode.h \
+ /usr/include/irrlicht/IVolumeLightSceneNode.h \
+ /usr/include/irrlicht/IWriteFile.h /usr/include/irrlicht/IXMLWriter.h \
+ /usr/include/irrlicht/ILightManager.h \
+ /usr/include/irrlicht/SAnimatedMesh.h \
+ /usr/include/irrlicht/SIrrCreationParameters.h \
+ /usr/include/irrlicht/SKeyMap.h /usr/include/irrlicht/SMesh.h \
+ /usr/include/irrlicht/SMeshBuffer.h \
+ /usr/include/irrlicht/SMeshBufferLightMap.h \
+ /usr/include/irrlicht/SMeshBufferTangents.h \
+ /usr/include/irrlicht/SSharedMeshBuffer.h \
+ /usr/include/irrlicht/SViewFrustum.h \
+ /usr/include/irrlicht/driverChoice.h CardStack.h Card.h CardType.h \
  CardSceneNode.h CommonVars.h EventReceiver.h
 
-C:/irrlicht-1.8.4/include/irrlicht.h:
+/usr/include/irrlicht/irrlicht.h:
 
-C:/irrlicht-1.8.4/include/IrrCompileConfig.h:
+/usr/include/irrlicht/IrrCompileConfig.h:
 
-C:/irrlicht-1.8.4/include/aabbox3d.h:
+/usr/include/irrlicht/aabbox3d.h:
 
-C:/irrlicht-1.8.4/include/irrMath.h:
+/usr/include/irrlicht/irrMath.h:
 
-C:/irrlicht-1.8.4/include/irrTypes.h:
+/usr/include/irrlicht/irrTypes.h:
 
-C:/irrlicht-1.8.4/include/plane3d.h:
+/usr/include/irrlicht/plane3d.h:
 
-C:/irrlicht-1.8.4/include/vector3d.h:
+/usr/include/irrlicht/vector3d.h:
 
-C:/irrlicht-1.8.4/include/line3d.h:
+/usr/include/irrlicht/line3d.h:
 
-C:/irrlicht-1.8.4/include/CDynamicMeshBuffer.h:
+/usr/include/irrlicht/CDynamicMeshBuffer.h:
 
-C:/irrlicht-1.8.4/include/IDynamicMeshBuffer.h:
+/usr/include/irrlicht/IDynamicMeshBuffer.h:
 
-C:/irrlicht-1.8.4/include/IMeshBuffer.h:
+/usr/include/irrlicht/IMeshBuffer.h:
 
-C:/irrlicht-1.8.4/include/IReferenceCounted.h:
+/usr/include/irrlicht/IReferenceCounted.h:
 
-C:/irrlicht-1.8.4/include/SMaterial.h:
+/usr/include/irrlicht/SMaterial.h:
 
-C:/irrlicht-1.8.4/include/SColor.h:
+/usr/include/irrlicht/SColor.h:
 
-C:/irrlicht-1.8.4/include/matrix4.h:
+/usr/include/irrlicht/matrix4.h:
 
-C:/irrlicht-1.8.4/include/vector2d.h:
+/usr/include/irrlicht/vector2d.h:
 
-C:/irrlicht-1.8.4/include/dimension2d.h:
+/usr/include/irrlicht/dimension2d.h:
 
-C:/irrlicht-1.8.4/include/rect.h:
+/usr/include/irrlicht/rect.h:
 
-C:/irrlicht-1.8.4/include/position2d.h:
+/usr/include/irrlicht/position2d.h:
 
-C:/irrlicht-1.8.4/include/irrString.h:
+/usr/include/irrlicht/irrString.h:
 
-C:/irrlicht-1.8.4/include/irrAllocator.h:
+/usr/include/irrlicht/irrAllocator.h:
 
-C:/irrlicht-1.8.4/include/irrArray.h:
+/usr/include/irrlicht/irrArray.h:
 
-C:/irrlicht-1.8.4/include/heapsort.h:
+/usr/include/irrlicht/heapsort.h:
 
-C:/irrlicht-1.8.4/include/EMaterialTypes.h:
+/usr/include/irrlicht/EMaterialTypes.h:
 
-C:/irrlicht-1.8.4/include/EMaterialFlags.h:
+/usr/include/irrlicht/EMaterialFlags.h:
 
-C:/irrlicht-1.8.4/include/SMaterialLayer.h:
+/usr/include/irrlicht/SMaterialLayer.h:
 
-C:/irrlicht-1.8.4/include/S3DVertex.h:
+/usr/include/irrlicht/S3DVertex.h:
 
-C:/irrlicht-1.8.4/include/SVertexIndex.h:
+/usr/include/irrlicht/SVertexIndex.h:
 
-C:/irrlicht-1.8.4/include/EHardwareBufferFlags.h:
+/usr/include/irrlicht/EHardwareBufferFlags.h:
 
-C:/irrlicht-1.8.4/include/EPrimitiveTypes.h:
+/usr/include/irrlicht/EPrimitiveTypes.h:
 
-C:/irrlicht-1.8.4/include/IVertexBuffer.h:
+/usr/include/irrlicht/IVertexBuffer.h:
 
-C:/irrlicht-1.8.4/include/IIndexBuffer.h:
+/usr/include/irrlicht/IIndexBuffer.h:
 
-C:/irrlicht-1.8.4/include/CVertexBuffer.h:
+/usr/include/irrlicht/CVertexBuffer.h:
 
-C:/irrlicht-1.8.4/include/CIndexBuffer.h:
+/usr/include/irrlicht/CIndexBuffer.h:
 
-C:/irrlicht-1.8.4/include/CMeshBuffer.h:
+/usr/include/irrlicht/CMeshBuffer.h:
 
-C:/irrlicht-1.8.4/include/coreutil.h:
+/usr/include/irrlicht/coreutil.h:
 
-C:/irrlicht-1.8.4/include/path.h:
+/usr/include/irrlicht/path.h:
 
-C:/irrlicht-1.8.4/include/ECullingTypes.h:
+/usr/include/irrlicht/ECullingTypes.h:
 
-C:/irrlicht-1.8.4/include/EDebugSceneTypes.h:
+/usr/include/irrlicht/EDebugSceneTypes.h:
 
-C:/irrlicht-1.8.4/include/EDriverFeatures.h:
+/usr/include/irrlicht/EDriverFeatures.h:
 
-C:/irrlicht-1.8.4/include/EDriverTypes.h:
+/usr/include/irrlicht/EDriverTypes.h:
 
-C:/irrlicht-1.8.4/include/EGUIAlignment.h:
+/usr/include/irrlicht/EGUIAlignment.h:
 
-C:/irrlicht-1.8.4/include/EGUIElementTypes.h:
+/usr/include/irrlicht/EGUIElementTypes.h:
 
-C:/irrlicht-1.8.4/include/EMeshWriterEnums.h:
+/usr/include/irrlicht/EMeshWriterEnums.h:
 
-C:/irrlicht-1.8.4/include/EMessageBoxFlags.h:
+/usr/include/irrlicht/EMessageBoxFlags.h:
 
-C:/irrlicht-1.8.4/include/ESceneNodeAnimatorTypes.h:
+/usr/include/irrlicht/ESceneNodeAnimatorTypes.h:
 
-C:/irrlicht-1.8.4/include/ESceneNodeTypes.h:
+/usr/include/irrlicht/ESceneNodeTypes.h:
 
-C:/irrlicht-1.8.4/include/ETerrainElements.h:
+/usr/include/irrlicht/ETerrainElements.h:
 
-C:/irrlicht-1.8.4/include/fast_atof.h:
+/usr/include/irrlicht/fast_atof.h:
 
-C:/irrlicht-1.8.4/include/IAnimatedMesh.h:
+/usr/include/irrlicht/IAnimatedMesh.h:
 
-C:/irrlicht-1.8.4/include/IMesh.h:
+/usr/include/irrlicht/IMesh.h:
 
-C:/irrlicht-1.8.4/include/IAnimatedMeshMD2.h:
+/usr/include/irrlicht/IAnimatedMeshMD2.h:
 
-C:/irrlicht-1.8.4/include/IAnimatedMeshMD3.h:
+/usr/include/irrlicht/IAnimatedMeshMD3.h:
 
-C:/irrlicht-1.8.4/include/IQ3Shader.h:
+/usr/include/irrlicht/IQ3Shader.h:
 
-C:/irrlicht-1.8.4/include/IFileSystem.h:
+/usr/include/irrlicht/IFileSystem.h:
 
-C:/irrlicht-1.8.4/include/IXMLReader.h:
+/usr/include/irrlicht/IXMLReader.h:
 
-C:/irrlicht-1.8.4/include/irrXML.h:
+/usr/include/irrlicht/irrXML.h:
 
-C:/irrlicht-1.8.4/include/IFileArchive.h:
+/usr/include/irrlicht/IFileArchive.h:
 
-C:/irrlicht-1.8.4/include/IReadFile.h:
+/usr/include/irrlicht/IReadFile.h:
 
-C:/irrlicht-1.8.4/include/IFileList.h:
+/usr/include/irrlicht/IFileList.h:
 
-C:/irrlicht-1.8.4/include/IVideoDriver.h:
+/usr/include/irrlicht/IVideoDriver.h:
 
-C:/irrlicht-1.8.4/include/ITexture.h:
+/usr/include/irrlicht/ITexture.h:
 
-C:/irrlicht-1.8.4/include/IImage.h:
+/usr/include/irrlicht/IImage.h:
 
-C:/irrlicht-1.8.4/include/triangle3d.h:
+/usr/include/irrlicht/triangle3d.h:
 
-C:/irrlicht-1.8.4/include/SExposedVideoData.h:
+/usr/include/irrlicht/SExposedVideoData.h:
 
-C:/irrlicht-1.8.4/include/quaternion.h:
+/usr/include/irrlicht/quaternion.h:
 
-C:/irrlicht-1.8.4/include/irrpack.h:
+/usr/include/irrlicht/irrpack.h:
 
-C:/irrlicht-1.8.4/include/irrunpack.h:
+/usr/include/irrlicht/irrunpack.h:
 
-C:/irrlicht-1.8.4/include/IAnimatedMeshSceneNode.h:
+/usr/include/irrlicht/IAnimatedMeshSceneNode.h:
 
-C:/irrlicht-1.8.4/include/ISceneNode.h:
+/usr/include/irrlicht/ISceneNode.h:
 
-C:/irrlicht-1.8.4/include/IAttributeExchangingObject.h:
+/usr/include/irrlicht/IAttributeExchangingObject.h:
 
-C:/irrlicht-1.8.4/include/ISceneNodeAnimator.h:
+/usr/include/irrlicht/ISceneNodeAnimator.h:
 
-C:/irrlicht-1.8.4/include/IEventReceiver.h:
+/usr/include/irrlicht/IEventReceiver.h:
 
-C:/irrlicht-1.8.4/include/ILogger.h:
+/usr/include/irrlicht/ILogger.h:
 
-C:/irrlicht-1.8.4/include/Keycodes.h:
+/usr/include/irrlicht/Keycodes.h:
 
-C:/irrlicht-1.8.4/include/ITriangleSelector.h:
+/usr/include/irrlicht/ITriangleSelector.h:
 
-C:/irrlicht-1.8.4/include/irrList.h:
+/usr/include/irrlicht/irrList.h:
 
-C:/irrlicht-1.8.4/include/IAttributes.h:
+/usr/include/irrlicht/IAttributes.h:
 
-C:/irrlicht-1.8.4/include/line2d.h:
+/usr/include/irrlicht/line2d.h:
 
-C:/irrlicht-1.8.4/include/EAttributes.h:
+/usr/include/irrlicht/EAttributes.h:
 
-C:/irrlicht-1.8.4/include/IBoneSceneNode.h:
+/usr/include/irrlicht/IBoneSceneNode.h:
 
-C:/irrlicht-1.8.4/include/IBillboardSceneNode.h:
+/usr/include/irrlicht/IBillboardSceneNode.h:
 
-C:/irrlicht-1.8.4/include/IBillboardTextSceneNode.h:
+/usr/include/irrlicht/IBillboardTextSceneNode.h:
 
-C:/irrlicht-1.8.4/include/ICameraSceneNode.h:
+/usr/include/irrlicht/ICameraSceneNode.h:
 
-C:/irrlicht-1.8.4/include/ICursorControl.h:
+/usr/include/irrlicht/ICursorControl.h:
 
-C:/irrlicht-1.8.4/include/IDummyTransformationSceneNode.h:
+/usr/include/irrlicht/IDummyTransformationSceneNode.h:
 
-C:/irrlicht-1.8.4/include/IGeometryCreator.h:
+/usr/include/irrlicht/IGeometryCreator.h:
 
-C:/irrlicht-1.8.4/include/IGPUProgrammingServices.h:
+/usr/include/irrlicht/IGPUProgrammingServices.h:
 
-C:/irrlicht-1.8.4/include/EShaderTypes.h:
+/usr/include/irrlicht/EShaderTypes.h:
 
-C:/irrlicht-1.8.4/include/IGUIButton.h:
+/usr/include/irrlicht/IGUIButton.h:
 
-C:/irrlicht-1.8.4/include/IGUIElement.h:
+/usr/include/irrlicht/IGUIElement.h:
 
-C:/irrlicht-1.8.4/include/IGUICheckBox.h:
+/usr/include/irrlicht/IGUICheckBox.h:
 
-C:/irrlicht-1.8.4/include/IGUIColorSelectDialog.h:
+/usr/include/irrlicht/IGUIColorSelectDialog.h:
 
-C:/irrlicht-1.8.4/include/IGUIComboBox.h:
+/usr/include/irrlicht/IGUIComboBox.h:
 
-C:/irrlicht-1.8.4/include/IGUIContextMenu.h:
+/usr/include/irrlicht/IGUIContextMenu.h:
 
-C:/irrlicht-1.8.4/include/IGUIEditBox.h:
+/usr/include/irrlicht/IGUIEditBox.h:
 
-C:/irrlicht-1.8.4/include/IGUIElementFactory.h:
+/usr/include/irrlicht/IGUIElementFactory.h:
 
-C:/irrlicht-1.8.4/include/IGUIEnvironment.h:
+/usr/include/irrlicht/IGUIEnvironment.h:
 
-C:/irrlicht-1.8.4/include/IGUISkin.h:
+/usr/include/irrlicht/IGUISkin.h:
 
-C:/irrlicht-1.8.4/include/IGUIFileOpenDialog.h:
+/usr/include/irrlicht/IGUIFileOpenDialog.h:
 
-C:/irrlicht-1.8.4/include/IGUIFont.h:
+/usr/include/irrlicht/IGUIFont.h:
 
-C:/irrlicht-1.8.4/include/IGUIFontBitmap.h:
+/usr/include/irrlicht/IGUIFontBitmap.h:
 
-C:/irrlicht-1.8.4/include/IGUIImage.h:
+/usr/include/irrlicht/IGUIImage.h:
 
-C:/irrlicht-1.8.4/include/IGUIInOutFader.h:
+/usr/include/irrlicht/IGUIInOutFader.h:
 
-C:/irrlicht-1.8.4/include/IGUIListBox.h:
+/usr/include/irrlicht/IGUIListBox.h:
 
-C:/irrlicht-1.8.4/include/IGUIMeshViewer.h:
+/usr/include/irrlicht/IGUIMeshViewer.h:
 
-C:/irrlicht-1.8.4/include/IGUIScrollBar.h:
+/usr/include/irrlicht/IGUIScrollBar.h:
 
-C:/irrlicht-1.8.4/include/IGUISpinBox.h:
+/usr/include/irrlicht/IGUISpinBox.h:
 
-C:/irrlicht-1.8.4/include/IGUISpriteBank.h:
+/usr/include/irrlicht/IGUISpriteBank.h:
 
-C:/irrlicht-1.8.4/include/IGUIStaticText.h:
+/usr/include/irrlicht/IGUIStaticText.h:
 
-C:/irrlicht-1.8.4/include/IGUITabControl.h:
+/usr/include/irrlicht/IGUITabControl.h:
 
-C:/irrlicht-1.8.4/include/IGUITable.h:
+/usr/include/irrlicht/IGUITable.h:
 
-C:/irrlicht-1.8.4/include/IGUIToolbar.h:
+/usr/include/irrlicht/IGUIToolbar.h:
 
-C:/irrlicht-1.8.4/include/IGUIWindow.h:
+/usr/include/irrlicht/IGUIWindow.h:
 
-C:/irrlicht-1.8.4/include/IGUITreeView.h:
+/usr/include/irrlicht/IGUITreeView.h:
 
-C:/irrlicht-1.8.4/include/IGUIImageList.h:
+/usr/include/irrlicht/IGUIImageList.h:
 
-C:/irrlicht-1.8.4/include/IImageLoader.h:
+/usr/include/irrlicht/IImageLoader.h:
 
-C:/irrlicht-1.8.4/include/IImageWriter.h:
+/usr/include/irrlicht/IImageWriter.h:
 
-C:/irrlicht-1.8.4/include/ILightSceneNode.h:
+/usr/include/irrlicht/ILightSceneNode.h:
 
-C:/irrlicht-1.8.4/include/SLight.h:
+/usr/include/irrlicht/SLight.h:
 
-C:/irrlicht-1.8.4/include/IMaterialRenderer.h:
+/usr/include/irrlicht/IMaterialRenderer.h:
 
-C:/irrlicht-1.8.4/include/IMaterialRendererServices.h:
+/usr/include/irrlicht/IMaterialRendererServices.h:
 
-C:/irrlicht-1.8.4/include/IMeshCache.h:
+/usr/include/irrlicht/IMeshCache.h:
 
-C:/irrlicht-1.8.4/include/IMeshLoader.h:
+/usr/include/irrlicht/IMeshLoader.h:
 
-C:/irrlicht-1.8.4/include/IMeshManipulator.h:
+/usr/include/irrlicht/IMeshManipulator.h:
 
-C:/irrlicht-1.8.4/include/SVertexManipulator.h:
+/usr/include/irrlicht/SVertexManipulator.h:
 
-C:/irrlicht-1.8.4/include/IMeshSceneNode.h:
+/usr/include/irrlicht/IMeshSceneNode.h:
 
-C:/irrlicht-1.8.4/include/IMeshWriter.h:
+/usr/include/irrlicht/IMeshWriter.h:
 
-C:/irrlicht-1.8.4/include/IColladaMeshWriter.h:
+/usr/include/irrlicht/IColladaMeshWriter.h:
 
-C:/irrlicht-1.8.4/include/IMetaTriangleSelector.h:
+/usr/include/irrlicht/IMetaTriangleSelector.h:
 
-C:/irrlicht-1.8.4/include/IOSOperator.h:
+/usr/include/irrlicht/IOSOperator.h:
 
-C:/irrlicht-1.8.4/include/IParticleSystemSceneNode.h:
+/usr/include/irrlicht/IParticleSystemSceneNode.h:
 
-C:/irrlicht-1.8.4/include/IParticleAnimatedMeshSceneNodeEmitter.h:
+/usr/include/irrlicht/IParticleAnimatedMeshSceneNodeEmitter.h:
 
-C:/irrlicht-1.8.4/include/IParticleEmitter.h:
+/usr/include/irrlicht/IParticleEmitter.h:
 
-C:/irrlicht-1.8.4/include/SParticle.h:
+/usr/include/irrlicht/SParticle.h:
 
-C:/irrlicht-1.8.4/include/IParticleBoxEmitter.h:
+/usr/include/irrlicht/IParticleBoxEmitter.h:
 
-C:/irrlicht-1.8.4/include/IParticleCylinderEmitter.h:
+/usr/include/irrlicht/IParticleCylinderEmitter.h:
 
-C:/irrlicht-1.8.4/include/IParticleMeshEmitter.h:
+/usr/include/irrlicht/IParticleMeshEmitter.h:
 
-C:/irrlicht-1.8.4/include/IParticleRingEmitter.h:
+/usr/include/irrlicht/IParticleRingEmitter.h:
 
-C:/irrlicht-1.8.4/include/IParticleSphereEmitter.h:
+/usr/include/irrlicht/IParticleSphereEmitter.h:
 
-C:/irrlicht-1.8.4/include/IParticleAttractionAffector.h:
+/usr/include/irrlicht/IParticleAttractionAffector.h:
 
-C:/irrlicht-1.8.4/include/IParticleAffector.h:
+/usr/include/irrlicht/IParticleAffector.h:
 
-C:/irrlicht-1.8.4/include/IParticleFadeOutAffector.h:
+/usr/include/irrlicht/IParticleFadeOutAffector.h:
 
-C:/irrlicht-1.8.4/include/IParticleGravityAffector.h:
+/usr/include/irrlicht/IParticleGravityAffector.h:
 
-C:/irrlicht-1.8.4/include/IParticleRotationAffector.h:
+/usr/include/irrlicht/IParticleRotationAffector.h:
 
-C:/irrlicht-1.8.4/include/IQ3LevelMesh.h:
+/usr/include/irrlicht/IQ3LevelMesh.h:
 
-C:/irrlicht-1.8.4/include/IRandomizer.h:
+/usr/include/irrlicht/IRandomizer.h:
 
-C:/irrlicht-1.8.4/include/IrrlichtDevice.h:
+/usr/include/irrlicht/IrrlichtDevice.h:
 
-C:/irrlicht-1.8.4/include/EDeviceTypes.h:
+/usr/include/irrlicht/EDeviceTypes.h:
 
-C:/irrlicht-1.8.4/include/IVideoModeList.h:
+/usr/include/irrlicht/IVideoModeList.h:
 
-C:/irrlicht-1.8.4/include/ITimer.h:
+/usr/include/irrlicht/ITimer.h:
 
-C:/irrlicht-1.8.4/include/irrMap.h:
+/usr/include/irrlicht/irrMap.h:
 
-C:/irrlicht-1.8.4/include/ISceneCollisionManager.h:
+/usr/include/irrlicht/ISceneCollisionManager.h:
 
-C:/irrlicht-1.8.4/include/ISceneLoader.h:
+/usr/include/irrlicht/ISceneLoader.h:
 
-C:/irrlicht-1.8.4/include/ISceneManager.h:
+/usr/include/irrlicht/ISceneManager.h:
 
-C:/irrlicht-1.8.4/include/SceneParameters.h:
+/usr/include/irrlicht/SceneParameters.h:
 
-C:/irrlicht-1.8.4/include/ISkinnedMesh.h:
+/usr/include/irrlicht/ISkinnedMesh.h:
 
-C:/irrlicht-1.8.4/include/SSkinMeshBuffer.h:
+/usr/include/irrlicht/SSkinMeshBuffer.h:
 
-C:/irrlicht-1.8.4/include/ISceneNodeAnimatorCameraFPS.h:
+/usr/include/irrlicht/ISceneNodeAnimatorCameraFPS.h:
 
-C:/irrlicht-1.8.4/include/ISceneNodeAnimatorCameraMaya.h:
+/usr/include/irrlicht/ISceneNodeAnimatorCameraMaya.h:
 
-C:/irrlicht-1.8.4/include/ISceneNodeAnimatorCollisionResponse.h:
+/usr/include/irrlicht/ISceneNodeAnimatorCollisionResponse.h:
 
-C:/irrlicht-1.8.4/include/ISceneNodeAnimatorFactory.h:
+/usr/include/irrlicht/ISceneNodeAnimatorFactory.h:
 
-C:/irrlicht-1.8.4/include/ISceneNodeFactory.h:
+/usr/include/irrlicht/ISceneNodeFactory.h:
 
-C:/irrlicht-1.8.4/include/ISceneUserDataSerializer.h:
+/usr/include/irrlicht/ISceneUserDataSerializer.h:
 
-C:/irrlicht-1.8.4/include/IShaderConstantSetCallBack.h:
+/usr/include/irrlicht/IShaderConstantSetCallBack.h:
 
-C:/irrlicht-1.8.4/include/IShadowVolumeSceneNode.h:
+/usr/include/irrlicht/IShadowVolumeSceneNode.h:
 
-C:/irrlicht-1.8.4/include/ITerrainSceneNode.h:
+/usr/include/irrlicht/ITerrainSceneNode.h:
 
-C:/irrlicht-1.8.4/include/ITextSceneNode.h:
+/usr/include/irrlicht/ITextSceneNode.h:
 
-C:/irrlicht-1.8.4/include/IVolumeLightSceneNode.h:
+/usr/include/irrlicht/IVolumeLightSceneNode.h:
 
-C:/irrlicht-1.8.4/include/IWriteFile.h:
+/usr/include/irrlicht/IWriteFile.h:
 
-C:/irrlicht-1.8.4/include/IXMLWriter.h:
+/usr/include/irrlicht/IXMLWriter.h:
 
-C:/irrlicht-1.8.4/include/ILightManager.h:
+/usr/include/irrlicht/ILightManager.h:
 
-C:/irrlicht-1.8.4/include/SAnimatedMesh.h:
+/usr/include/irrlicht/SAnimatedMesh.h:
 
-C:/irrlicht-1.8.4/include/SIrrCreationParameters.h:
+/usr/include/irrlicht/SIrrCreationParameters.h:
 
-C:/irrlicht-1.8.4/include/SKeyMap.h:
+/usr/include/irrlicht/SKeyMap.h:
 
-C:/irrlicht-1.8.4/include/SMesh.h:
+/usr/include/irrlicht/SMesh.h:
 
-C:/irrlicht-1.8.4/include/SMeshBuffer.h:
+/usr/include/irrlicht/SMeshBuffer.h:
 
-C:/irrlicht-1.8.4/include/SMeshBufferLightMap.h:
+/usr/include/irrlicht/SMeshBufferLightMap.h:
 
-C:/irrlicht-1.8.4/include/SMeshBufferTangents.h:
+/usr/include/irrlicht/SMeshBufferTangents.h:
 
-C:/irrlicht-1.8.4/include/SSharedMeshBuffer.h:
+/usr/include/irrlicht/SSharedMeshBuffer.h:
 
-C:/irrlicht-1.8.4/include/SViewFrustum.h:
+/usr/include/irrlicht/SViewFrustum.h:
 
-C:/irrlicht-1.8.4/include/driverChoice.h:
+/usr/include/irrlicht/driverChoice.h:
 
 CardStack.h:
 
